@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.9.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.netty</groupId>
+    <artifactId>wechat-server</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>wechat-server</name>
+    <description>Demo project for Spring Boot</description>
+    <properties>
+        <java.version>1.8</java.version>
+        <build.finalName>wechat-server</build.finalName>
+        <skipTests>true</skipTests>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <druid.version>1.2.3</druid.version>
+        <mybatis-plus.version>3.1.0</mybatis-plus.version>
+
+        <commons-lang3.version>3.11</commons-lang3.version>
+        <commons-collections.version>4.4</commons-collections.version>
+        <commons-codec.version>1.15</commons-codec.version>
+        <commons-io.version>2.8.0</commons-io.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <commons-text.version>1.9</commons-text.version>
+        <commons-validator.version>1.7</commons-validator.version>
+
+        <shiro.version>1.4.0</shiro.version>
+        <jsoup.version>1.11.3</jsoup.version>
+
+        <ex-framework-version>1.0.1</ex-framework-version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+
+        <!--基础包-->
+        <dependency>
+            <groupId>com.ex.framework</groupId>
+            <artifactId>common</artifactId>
+            <version>${ex-framework-version}</version>
+        </dependency>
+
+        <!--数据包-->
+        <dependency>
+            <groupId>com.ex.framework</groupId>
+            <artifactId>data</artifactId>
+            <version>${ex-framework-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+
+        <!--基础包-->
+        <dependency>
+            <groupId>com.ex.framework</groupId>
+            <artifactId>common</artifactId>
+            <version>${ex-framework-version}</version>
+        </dependency>
+
+        <!--数据包-->
+        <dependency>
+            <groupId>com.ex.framework</groupId>
+            <artifactId>data</artifactId>
+            <version>${ex-framework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
